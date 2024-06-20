@@ -5,7 +5,8 @@ h2 {
   color: #00ff00; }
 
 h3 {
-  font-size: 15px; }
+  font-size: 15px;
+  color: blue; }
 
 * {
   margin: 0;
