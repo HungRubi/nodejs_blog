@@ -9,13 +9,13 @@ const port = 3000
 app.use(morgan('combined'))
 
 //Template engine
-app.engine('handlebars', handlebars.engine({extname: '.hbs'}))
-app.set('view engine', 'handlebars')
+app.engine('.hbs', handlebars.engine({extname: '.hbs'}))
+app.set('view engine', '.hbs')
 
 app.set('views', path.join(__dirname, 'resources','views'))
 console.log('Path: ', path.join(__dirname, 'resources','views'))
 
-app.get('/ngoc-rong',(req, res) => {
+app.get('/',(req, res) => {
     res.render('home')
 })
 app.listen(port, () => console.log(`ví dụ này đang chạy ở địa chỉ url http://localhost:${port}`))
